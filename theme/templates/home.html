@@ -1,0 +1,40 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currículo - Deiner Rodrigues</title>
+  {% tailwind_css %}
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto text-center">
+      <h1 class="text-4xl font-bold">Deiner Rodrigues</h1>
+      <p class="mt-2 text-lg">Cientista de Dados | Tecnologia | Pensamento Analítico</p>
+    </div>
+  </header>
+
+  <main class="relative w-screen h-screen bg-blue-600 overflow-hidden">
+    <div name="squares" class="w-screen h-screen animate-fade animate-infinite animate-duration-[1000ms] animate-ease-in-out animate-alternate-reverse">
+    {% for pos in positions %}
+      <svg class= " absolute w-40 h-40" style= "top: {{pos.top}}px; left: {{pos.left}}px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 476.61 486.55"><g opacity=".33"><rect x="39.87" y="179.18" width="178.87" height="178.87" transform="translate(30.8 549.98) rotate(-135)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4"/><rect x="249.05" y="314.04" width="139.96" height="140.82" transform="translate(272.77 881.88) rotate(-135)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4"/><rect x="266.95" y="38.49" width="171.6" height="170.75" transform="translate(514.59 460.89) rotate(-135)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4"/></g></svg>
+      
+      {% endfor %}
+
+      {% for pos in positions2 %}
+      <svg class="absolute w-40 h-40" style= "top: {{pos.top}}px; left: {{pos.left}}px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 476.61 486.55"><g opacity=".33"><rect x="257.87" y="179.18" width="178.87" height="178.87" transform="translate(-88.21 324.26) rotate(-45)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4"/><rect x="87.61" y="314.04" width="139.96" height="140.82" transform="translate(-225.69 224.03) rotate(-45)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4"/><rect x="38.07" y="38.49" width="171.6" height="170.75" transform="translate(-51.31 123.87) rotate(-45)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4"/></g></svg>
+      {% endfor %}
+    </div>
+    <h1 class="animate-fade animate-infinite animate-duration-2000 text-white text-4xl font-bold z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+          text
+    </h1>
+    
+  </main>
+
+
+
+</body>
+</html>
