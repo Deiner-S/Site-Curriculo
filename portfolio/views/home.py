@@ -7,7 +7,7 @@ def home(request):
         {'top': 170, 'left': 1466},
         {'top': 46, 'left': 1763},
         {'top': 100, 'left': 146},
-        {'top': 666, 'left': 818},
+        {'top': 566, 'left': 888},
         {'top': 609, 'left': 1300},
         {'top': 774, 'left': 1666},
         {'top': 211, 'left': 1197},
