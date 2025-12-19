@@ -7,51 +7,122 @@
   <title>Currículo - Deiner Rodrigues</title>
   {% tailwind_css %}
 </head>
-<body>
+<body class="overflow-x-hidden bg-[#1C1B1D]">
 
   <!-- Header -->
-  <header class=" bg-gray-800 text-white h-[100px] content-center">
-    <div class=" flex flex-row mx-auto w-full pl-20">
+  <header class="text-white h-[100px]">
+    <div class="flex flex-row w-full pl-20">
       <a href="" class="ml-5 mr-5 font-bold text-lg hover:text-gray-300">Projetos</a>
       <a href="" class="ml-5 mr-5 font-bold text-lg hover:text-gray-300">Skils</a>
     </div>
-    <div>
-
-    </div>
   </header>
 
-  <main class="relative w-screen h-screen bg-blue-950 overflow-hidden">
-    <div name="squares" class="absolute top-0 left-0 w-full h-full z-0 animate-fade animate-infinite animate-duration-[10000ms] animate-ease-in-out animate-alternate-reverse">
-    {% for pos in positions %}
-      <svg class= " absolute w-40 h-40" style= "top: {{pos.top}}px; left: {{pos.left}}px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 476.61 486.55"><g opacity=".63"><rect x="39.87" y="179.18" width="178.87" height="178.87" transform="translate(30.8 549.98) rotate(-135)" fill="none" stroke="#2D5E66" stroke-miterlimit="10" stroke-width="4"/><rect x="249.05" y="314.04" width="139.96" height="140.82" transform="translate(272.77 881.88) rotate(-135)" fill="none" stroke="#CA4142" stroke-miterlimit="10" stroke-width="4"/><rect x="266.95" y="38.49" width="171.6" height="170.75" transform="translate(514.59 460.89) rotate(-135)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4"/></g></svg>
+  <main>
+    <!-- Seção principal -->
+    <section class="relative w-screen h-[90vh] bg-blue-950 overflow-hidden section-v">
       
-      {% endfor %}
+      <!-- Animação de quadrados -->
+      <div name="squares" class="absolute top-0 left-0 w-full h-full z-0 animate-fade animate-infinite animate-duration-[10000ms] animate-ease-in-out animate-alternate-reverse">
+        {% for pos in positions %}
+          <svg class="absolute w-30 h-30" style="top: {{pos.top}}px; left: {{pos.left}}px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 476.61 486.55">
+            <g opacity=".8">
+              <rect x="39.87" y="179.18" width="178.87" height="178.87" transform="translate(30.8 549.98) rotate(-135)" fill="none" stroke="#2D5E66" stroke-miterlimit="10" stroke-width="10"/>
+              <rect x="249.05" y="314.04" width="139.96" height="140.82" transform="translate(272.77 881.88) rotate(-135)" fill="none" stroke="#CA4142" stroke-miterlimit="10" stroke-width="10"/>
+              <rect x="266.95" y="38.49" width="171.6" height="170.75" transform="translate(514.59 460.89) rotate(-135)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="5"/>
+            </g>
+          </svg>
+        {% endfor %}
 
-      {% for pos in positions2 %}
-      <svg class="absolute w-40 h-40" style= "top: {{pos.top}}px; left: {{pos.left}}px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 476.61 486.55"><g opacity=".63"><rect x="257.87" y="179.18" width="178.87" height="178.87" transform="translate(-88.21 324.26) rotate(-45)" fill="none" stroke="#CA4142" stroke-miterlimit="10" stroke-width="4"/><rect x="87.61" y="314.04" width="139.96" height="140.82" transform="translate(-225.69 224.03) rotate(-45)" fill="none" stroke="#2D5E66" stroke-miterlimit="10" stroke-width="4"/><rect x="38.07" y="38.49" width="171.6" height="170.75" transform="translate(-51.31 123.87) rotate(-45)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4"/></g></svg>
-      {% endfor %}
-    </div>
-    <div class="z-10 top-[50px] left-[50px] w-200 h-200 pl-60 pt-80 animate-fade-up animate-duration-[2000ms] animate-delay-1000 animate-ease-in">
-      <h2 class=" font-bold text-5xl ">A lógica revela, mas a curiosidade move</h2>
-      <p class="w-150 h-100 text-2xl pt-10" >A lógica me guia pelos caminhos certos, mas é a curiosidade que me faz ir além do óbvio. 
-        Entre números, padrões e incertezas, é ela que mantém meu olhar atento, meu pensamento vivo 
-        e minha vontade de entender o mundo do jeito mais honesto possível.
-      </p>
-    </div>
-    <!-- <svg class="absolute w-20 h-20 z-10 top-[50px] left-[50px]" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 102 76.56"><defs><style>.c{clip-path:url(#b);}.d{fill:none;}.e{fill:#fcfcfc;}</style><clipPath id="b"><rect width="102" height="76.56" fill="none"/></clipPath></defs><g clip-path="#b"><g><rect x="0" width="5.96" height="5.96" fill="#fcfcfc"/><rect x="32.01" width="5.96" height="5.96" fill="#fcfcfc"/><rect x="64.03" width="5.96" height="5.96" fill="#fcfcfc"/><rect x="96.04" width="5.96" height="5.96" fill="#fcfcfc"/><rect x="0" y="32.01" width="5.96" height="5.96" fill="#fcfcfc"/><rect x="32.01" y="32.01" width="5.96" height="5.96" fill="#fcfcfc"/><rect x="64.03" y="32.01" width="5.96" height="5.96" fill="#fcfcfc"/><rect x="96.04" y="32.01" width="5.96" height="5.96" fill="#fcfcfc"/><rect x="0" y="64.03" width="5.96" height="5.96" fill="#fcfcfc"/><rect x="32.01" y="64.03" width="5.96" height="5.96" fill="#fcfcfc"/><rect x="64.03" y="64.03" width="5.96" height="5.96" fill="#fcfcfc"/><rect x="96.04" y="64.03" width="5.96" height="5.96" fill="#fcfcfc"/></g></g></svg>
-    <svg class="absolute w-20 h-20 z-10 top-[900px] left-[1930px]" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 102 76.56"><defs><style>.c{clip-path:url(#b);}.d{fill:none;}.e{fill:#fcfcfc;}</style><clipPath id="b"><rect width="102" height="76.56" fill="none"/></clipPath></defs><g clip-path="#b"><g><rect x="0" width="5.96" height="5.96" fill="#fcfcfc"/><rect x="32.01" width="5.96" height="5.96" fill="#fcfcfc"/><rect x="64.03" width="5.96" height="5.96" fill="#fcfcfc"/><rect x="96.04" width="5.96" height="5.96" fill="#fcfcfc"/><rect x="0" y="32.01" width="5.96" height="5.96" fill="#fcfcfc"/><rect x="32.01" y="32.01" width="5.96" height="5.96" fill="#fcfcfc"/><rect x="64.03" y="32.01" width="5.96" height="5.96" fill="#fcfcfc"/><rect x="96.04" y="32.01" width="5.96" height="5.96" fill="#fcfcfc"/><rect x="0" y="64.03" width="5.96" height="5.96" fill="#fcfcfc"/><rect x="32.01" y="64.03" width="5.96" height="5.96" fill="#fcfcfc"/><rect x="64.03" y="64.03" width="5.96" height="5.96" fill="#fcfcfc"/><rect x="96.04" y="64.03" width="5.96" height="5.96" fill="#fcfcfc"/></g></g></svg>
-  -->
-    <svg class="absolute w-200 h-200 z-10 top-1/2 right-0 -translate-y-1/2 animate-fade-left animate-duration-[2000ms] animate-ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1016 611">
-      <g id="b">
-        <path d="M171.43,41H1016V611H0V212.43C0,117.82,76.82,41,171.43,41Z" fill="#1E2939"/>
-      </g>
-    </svg>
+        {% for pos in positions2 %}
+          <svg class="absolute w-30 h-30" style="top: {{pos.top}}px; left: {{pos.left}}px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 476.61 486.55">
+            <g opacity=".8">
+              <rect x="257.87" y="179.18" width="178.87" height="178.87" transform="translate(-88.21 324.26) rotate(-45)" fill="none" stroke="#CA4142" stroke-miterlimit="10" stroke-width="10"/>
+              <rect x="87.61" y="314.04" width="139.96" height="140.82" transform="translate(-225.69 224.03) rotate(-45)" fill="none" stroke="#2D5E66" stroke-miterlimit="10" stroke-width="10"/>
+              <rect x="38.07" y="38.49" width="171.6" height="170.75" transform="translate(-51.31 123.87) rotate(-45)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="5"/>
+            </g>
+          </svg>
+        {% endfor %}
+      </div>
 
-    <svg class="absolute w-200 h-200 z-15 top-[750px] right-0 -translate-y-1/2 animate-fade-up animate-duration-[2000ms] animate-ease-in animate-delay-500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 404.57 719.24"><defs><style>.d{clip-path:url(#c);}.e{fill:none;}</style><clipPath id="c"><path d="M143.7,139.29H404.19V713.85H0V282.98C0,203.68,64.39,139.29,143.7,139.29Z" fill="none"/></clipPath></defs><g id="b"><g clip-path="#c"><image transform="scale(.37)" xlink:href="/static/img/photo1.png"/></g></g></svg>
+      <!-- Conteúdo principal em duas colunas -->
+      <div class="relative z-10 h-full w-full grid grid-cols-2">
+        
+        <!-- Coluna esquerda -->
+        <div class="relative z-20 h-full">
+          <div class=" w-[35vw] h-[90vh] ml-[3vw] content-center animate-fade-up animate-duration-[2000ms] animate-delay-1000 animate-ease-in">
+            <h2 class="font-bold text-6xl">A lógica revela, mas a curiosidade move</h2>
+            <p class="w-150 h-100 text-3xl pt-10">
+              A lógica me guia pelos caminhos certos, mas é a curiosidade que me faz ir além do óbvio. 
+              Entre números, padrões e incertezas, é ela que mantém meu olhar atento, meu pensamento vivo 
+              e minha vontade de entender o mundo do jeito mais honesto possível.
+            </p>
+          </div>
+        </div>
+
+        <!-- Coluna direita -->
+        <div class="relative z-20 h-full flex flex-col">
+          <div class="absolute top-0 right-0 h-[90vh] w-[35vw]">
+            
+            <!-- SVG principal -->
+            <svg class="absolute w-180 h-180 top-[4%] animate-fade-left animate-duration-[2000ms] animate-ease-in-out"
+                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1016 611">
+              <g id="b">
+                <path d="M171.43,41H1016V611H0V212.43C0,117.82,76.82,41,171.43,41Z" fill="#1C1B1D"/>
+              </g>
+            </svg>
+
+            <!-- SVG secundário / imagem -->
+              <svg class="absolute w-200 h-200 top-[75%] right-0 -translate-y-1/2 animate-fade-up animate-duration-[2000ms] animate-ease-in animate-delay-500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 404.57 719.24"><defs><style>.d{clip-path:url(#c);}.e{fill:none;}</style><clipPath id="c"><path d="M143.7,139.29H404.19V713.85H0V282.98C0,203.68,64.39,139.29,143.7,139.29Z" fill="none"/></clipPath></defs><g id="b"><g clip-path="#c"><image transform="scale(.37)" xlink:href="/static/img/photo1.png"/></g></g></svg>
+
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Seção skills / gráfico -->
+    <section class="text-white w-screen h-screen">
+      <div class="w-[60%] h-screen mx-auto">
+        <h2 class="font-bold text-6xl">
+          Abilidades técnicas
+        </h2>
+
+        <!-- Gráfico de skill -->
+        
+        {% for sk in skills %}
+          <svg viewBox="0 0 36 36" class="w-24 h-24">
+            <!-- Fundo -->
+            <path
+            d="M18 2.0845
+            a 15.9155 15.9155 0 0 1 0 31.831
+            a 15.9155 15.9155 0 0 1 0 -31.831"
+            fill="none"
+            stroke="#e5e7eb"
+            stroke-width="3"
+            />
+            
+            <!-- Progresso -->
+            <path
+            d="M18 2.0845
+            a 15.9155 15.9155 0 0 1 0 31.831
+            a 15.9155 15.9155 0 0 1 0 -31.831"
+            fill="none"
+            stroke="#1e40af"
+            stroke-width="3.5"
+            stroke-dasharray={{sk.porce}}
+            />
+            
+            <!-- Texto central -->
+            <text x="18" y="18" text-anchor="middle" dominant-baseline="middle"
+            class="fill-slate-100 text-[6px] font-semibold">
+            {{sk.name}}
+            </text>
+          </svg>
+        {% endfor %}
+      </div>
+    </section>
     
   </main>
-
-
-
 </body>
 </html>

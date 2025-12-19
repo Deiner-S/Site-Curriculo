@@ -26,4 +26,16 @@ def home(request):
         {'top': 820, 'left': 1115},
         {'top': 183, 'left': 513},
     ]
-    return render(request, path.HOME,{'positions': positions, "positions2":positions2})
+
+
+    skills = [
+        {"name" : "React N", "porce" : "40,100"},
+        {"name" : "Django", "porce" : "75,100"},
+        {"name" : "TailWind", "porce" : "60,100"},
+        {"name" : "Python", "porce" : "75,100"},
+        {"name" : "TypeScript", "porce" : "40,100"},
+        {"name" : "Java", "porce" : "50,100"},
+        {"name" : "SQL", "porce" : "30,100"},
+        {"name" : "Pandas", "porce" : "65,100"},
+    ]
+    return render(request, path.HOME,{'positions': positions, "positions2":positions2, "skills":skills})
