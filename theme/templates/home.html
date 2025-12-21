@@ -10,7 +10,7 @@
 <body class="overflow-x-hidden bg-[#1C1B1D]">
 
   <!-- Header -->
-  <header class="text-white h-[100px]">
+  <header class="text-white h-[100px] content-center">
     <div class="flex flex-row w-full pl-20">
       <a href="" class="ml-5 mr-5 font-bold text-lg hover:text-gray-300">Projetos</a>
       <a href="" class="ml-5 mr-5 font-bold text-lg hover:text-gray-300">Skils</a>
@@ -82,44 +82,38 @@
     </section>
 
     <!-- Seção skills / gráfico -->
-    <section class="text-white w-screen h-screen">
-      <div class="w-[60%] h-screen mx-auto">
+    <section class="text-white w-screen h-[50vh] ">
+      <div class="w-[50%] h-screen mx-auto mt-20 p-10">
         <h2 class="font-bold text-6xl">
-          Abilidades técnicas
+          Habilidades técnicas
         </h2>
+        <div id="Skills" class="mt-15">
+          <div id="language" class=" flex items-center justify-between w-full">
+            <h3 class="text-4xl m-5">Linguagens</h3>
 
-        <!-- Gráfico de skill -->
-        
-        {% for sk in skills %}
-          <svg viewBox="0 0 36 36" class="w-24 h-24">
-            <!-- Fundo -->
-            <path
-            d="M18 2.0845
-            a 15.9155 15.9155 0 0 1 0 31.831
-            a 15.9155 15.9155 0 0 1 0 -31.831"
-            fill="none"
-            stroke="#e5e7eb"
-            stroke-width="3"
-            />
-            
-            <!-- Progresso -->
-            <path
-            d="M18 2.0845
-            a 15.9155 15.9155 0 0 1 0 31.831
-            a 15.9155 15.9155 0 0 1 0 -31.831"
-            fill="none"
-            stroke="#1e40af"
-            stroke-width="3.5"
-            stroke-dasharray={{sk.porce}}
-            />
-            
-            <!-- Texto central -->
-            <text x="18" y="18" text-anchor="middle" dominant-baseline="middle"
-            class="fill-slate-100 text-[6px] font-semibold">
-            {{sk.name}}
-            </text>
-          </svg>
-        {% endfor %}
+            <div class="flex flex-wrap justify-end">
+              {% for sk in language %}
+                {% include "components/skill_chart.html" with percent=sk.porce label=sk.name collor="#CA4142" %}            
+              {% endfor %}
+            </div>
+          </div>
+          <!-- Gráfico de skill -->
+          <div id="frameworks" class=" flex items-center justify-between w-full">
+            <h3 class="text-4xl m-5">Frameworks</h3>
+            <div class="flex flex-wrap justify-end">
+              {% for sk in frameworks %}
+                {% include "components/skill_chart.html" with percent=sk.porce label=sk.name collor="#2D5E66" %} 
+              {% endfor %}              
+            </div>
+          </div>
+        </div>   
+      </div>
+    </section>
+    <section class="bg-[#272628] text-white w-screen h-[60vh]">
+      <div class="w-[50%] h-screen mx-auto mt-20 p-10">
+        <h2 class="font-bold text-6xl">
+          Haptidões
+        </h2>
       </div>
     </section>
     
