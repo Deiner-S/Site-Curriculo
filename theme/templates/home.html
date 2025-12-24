@@ -4,140 +4,182 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Currículo - Deiner Rodrigues</title>
+  <title>Deiner - S</title>
   {% tailwind_css %}
 </head>
-<body class="overflow-x-hidden bg-[#1C1B1D]">
+<body class="min-h-screen flex flex-col bg-[#1C1B1D] font-mono overflow-x-hidden">
 
   <!-- Header -->
-  <header class="text-white h-[100px] content-center">
-    <div class="flex flex-row w-full pl-20">
-      <a href="" class="ml-5 mr-5 font-bold text-lg hover:text-gray-300">Projetos</a>
-      <a href="" class="ml-5 mr-5 font-bold text-lg hover:text-gray-300">Skils</a>
-    </div>
+  <header class="h-[100px] text-white flex items-center">
+    <nav class="flex gap-10 pl-20">
+      <a href="#Stack" class="font-bold text-lg hover:text-gray-300">Stack</a>
+      <a href="#Competencias" class="font-bold text-lg hover:text-gray-300">Competências</a>
+      <a href="#Projetos" class="font-bold text-lg hover:text-gray-300">Projetos</a>
+      <a href="#Formacao" class="font-bold text-lg hover:text-gray-300">Formação</a>
+      <a href="#Experiencia" class="font-bold text-lg hover:text-gray-300">Experiência</a>
+    </nav>
   </header>
 
-  <main>
-    <section class="relative w-screen h-[90vh] bg-[linear-gradient(30deg,#385EA7,#222B53)] overflow-hidden section-v">   
-      <!--
-        <div name="background_squares">
-          <div class="absolute top-0 left-0 w-full h-full z-0 animate-fade animate-infinite animate-duration-[10000ms] animate-ease-in-out animate-alternate-reverse">
-            {% for pos in positions %}
-            <svg class="absolute w-30 h-30" style="top: {{pos.top}}px; left: {{pos.left}}px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 476.61 486.55">
-              <g opacity=".8">
-                <rect x="39.87" y="179.18" width="178.87" height="178.87" transform="translate(30.8 549.98) rotate(-135)" fill="none" stroke="#2D5E66" stroke-miterlimit="10" stroke-width="10"/>
-                <rect x="249.05" y="314.04" width="139.96" height="140.82" transform="translate(272.77 881.88) rotate(-135)" fill="none" stroke="#CA4142" stroke-miterlimit="10" stroke-width="10"/>
-                <rect x="266.95" y="38.49" width="171.6" height="170.75" transform="translate(514.59 460.89) rotate(-135)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="5"/>
-              </g>
-            </svg>
-            {% endfor %}
-            
-            {% for pos in positions2 %}
-            <svg class="absolute w-30 h-30" style="top: {{pos.top}}px; left: {{pos.left}}px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 476.61 486.55">
-              <g opacity=".8">
-                <rect x="257.87" y="179.18" width="178.87" height="178.87" transform="translate(-88.21 324.26) rotate(-45)" fill="none" stroke="#CA4142" stroke-miterlimit="10" stroke-width="10"/>
-                <rect x="87.61" y="314.04" width="139.96" height="140.82" transform="translate(-225.69 224.03) rotate(-45)" fill="none" stroke="#2D5E66" stroke-miterlimit="10" stroke-width="10"/>
-                <rect x="38.07" y="38.49" width="171.6" height="170.75" transform="translate(-51.31 123.87) rotate(-45)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="5"/>
-              </g>
-            </svg>
-            {% endfor %}
-          </div>
-        </div>
-      -->   
+  <main class="flex-1 w-full text-white">
 
-      <!-- Conteúdo principal em duas colunas -->
-      <div class="relative z-10 h-full w-full grid grid-cols-2">
+    <!-- Hero -->
+    <section class="relative min-h-[90vh] w-full bg-[linear-gradient(30deg,#385EA7,#222B53)] overflow-hidden">   
+
+      <div class="absolute flex flex-row z-10 ml-[3vw]  items-center text-3xl">
+        {% include "components/Ativo.html" %}
+        <p class="text-[#D64747] ml-5">let</p>
+        <p class="ml-5">Start</p>
+      </div>
         
-        <!-- Coluna esquerda -->
-        <div name="introdution_text" class="relative z-20 h-full">
-          <div class=" w-[35vw] h-[90vh] ml-[3vw] content-center animate-fade-up animate-duration-[2000ms] animate-delay-1000 animate-ease-in">
-            <h2 class="font-bold text-6xl">A lógica revela, mas a curiosidade move</h2>
-            <p class="w-150 h-100 text-3xl pt-10">
-              A lógica me guia pelos caminhos certos, mas é a curiosidade que me faz ir além do óbvio. 
-              Entre números, padrões e incertezas, é ela que mantém meu olhar atento, meu pensamento vivo 
-              e minha vontade de entender o mundo do jeito mais honesto possível.
+      
+      <div class=" grid min-h-[90vh] grid-cols-2  content-center">
+        
+        <div name="center" class="flex flex-col ml-[3vw] col-span-1">
+          <div class=" w-[35vw] animate-fade-up animate-duration-[2000ms] animate-delay-1000 animate-ease-in">
+            <h2 class="text-6xl font-bold">
+              {{ texts.0.title }}
+            </h2>
+            <p class="mt-10 text-3xl">
+              {{ texts.0.text }}
             </p>
           </div>
         </div>
-
-        <!-- Coluna direita -->
-        <div name="photo" class="relative z-20 h-full flex flex-col">
-          <!--<div class="absolute top-0 right-0 h-[90vh] w-[35vw]">
-            <svg class="absolute w-180 h-180 top-[4%] animate-fade-left animate-duration-[2000ms] animate-ease-in-out"
-                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1016 611">
-              <g id="b">
-                <path d="M171.43,41H1016V611H0V212.43C0,117.82,76.82,41,171.43,41Z" fill="#1C1B1D"/>
-              </g>
-            </svg>
-              <svg class="absolute w-200 h-200 top-[75%] right-0 -translate-y-1/2 animate-fade-up animate-duration-[2000ms] animate-ease-in animate-delay-500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 404.57 719.24"><defs><style>.d{clip-path:url(#c);}.e{fill:none;}</style><clipPath id="c"><path d="M143.7,139.29H404.19V713.85H0V282.98C0,203.68,64.39,139.29,143.7,139.29Z" fill="none"/></clipPath></defs><g id="b"><g clip-path="#c"><image transform="scale(.37)" xlink:href="/static/img/photo1.png"/></g></g></svg>
-          </div>
-        </div>-->
-
       </div>
-    </section> 
+    </section>
 
-    <!-- Seção skills / gráfico -->
-    <section class="text-white w-screen h-[50vh] ">
-      <div class="w-[50%] h-screen mx-auto mt-20 p-10">
-        <h2 class="font-bold text-6xl">
-          Stack
-        </h2>
-        <div name="Skills" class="mt-15 px-15">
-          <div name="language" class=" flex items-center justify-between w-full">
-            <h3 class="text-4xl m-5 font-bold">Linguagens</h3>
+    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 w-8 h-8 
+            border-b-4 border-r-4 border-white rotate-45">
+    </div>
 
-            <div class="flex flex-wrap justify-end">
+
+    <!-- Stack -->
+    
+    <div class="mx-auto mt-5 w-1/2 min-h-screen p-10">
+
+      <section id="Stack">
+        <h2 class="text-6xl font-bold">Stack</h2>
+        
+        <div  class="mt-10 space-y-10">
+          
+          <!-- Linguagens -->
+          <div class="flex items-center justify-between">
+            <h3 class="m-5 text-4xl font-bold">Linguagens</h3>
+            <div class="flex flex-wrap justify-end gap-4">
               {% for sk in language %}
-                {% include "components/skill_chart.html" with percent=sk.porce label=sk.name collor="#385EA8" %}            
+              {% include "components/skill_chart.html" with percent=sk.porce label=sk.name collor="#385EA8" %}
               {% endfor %}
             </div>
           </div>
-          <!-- Gráfico de skill -->
-          <div name="frameworks" class=" flex items-center justify-between w-full">
-            <h3 class="text-4xl m-5 font-bold">Frameworks</h3>
-            <div class="flex flex-wrap justify-end">
+          
+          <!-- Frameworks -->
+          <div class="flex items-center justify-between">
+            <h3 class="m-5 text-4xl font-bold">Frameworks</h3>
+            <div class="flex flex-wrap justify-end gap-4">
               {% for sk in frameworks %}
-                {% include "components/skill_chart.html" with percent=sk.porce label=sk.name collor="#2D5E66" %} 
-              {% endfor %}              
+              {% include "components/skill_chart.html" with percent=sk.porce label=sk.name collor="#2D5E66" %}
+              {% endfor %}
             </div>
           </div>
-        </div>   
-      </div>
-    </section>
-
-
-    <section class="bg-[#272628] text-white w-screen h-[65vh]">
-      <div class="w-[50%] h-screen mx-auto mt-20 p-10">
-        <h2 class="font-bold text-6xl">
-          Competências técnias
-        </h2>
-        <div class="grid grid-cols-2 mt-8 text-2xl">
-            <div class=" col-span-1 mr-1 p-7 rounded-2xl bg-[#2D5E66]">
-              <h3 class="pb-5 text-3xl font-bold">Desenvolvimento de software</h3>
-              <ul class="list-disc pl-6 space-y-6">
-                <li>Mapeamento de processos</li>
-                <li>Estruturação de back-end</li>
-                <li>Estruturação de interfaces e componentes</li>
-                <li>Atenção à aplicação de principios de 
-                  arquitetura de software                 
-                </li>
-                <li>Atenção à clareza e coesão de código</li>
-              </ul>
-            </div>
-            <div class=" col-span-1 ml-1 p-7  rounded-2xl bg-[#6584C2]">
-              <h3 class="pb-5 text-3xl font-bold">Dados, Análise e Automação</h3>
-              <ul class=" list-disc pl-6 space-y-6">
-                <li>Coleta e scraping de dados</li>
-                <li>Tratamento e limpeza de dados</li>
-                <li>Análise exploratória de dados</li>
-                <li>Visualização de dados</li>
-                <li>Automação de processos e rotinas</li>
-              </ul>
-            </div>
+          
         </div>
-      </div>
-    </section>
+        
+        <hr class="my-10 border-gray-300">
+      </section>
+
+      
+      <section id="Competencias">
+        <h2 class="mt-10 text-6xl font-bold">
+          Competências técnicas
+        </h2>
+        
+        <div id="Comp" class="mt-10 grid grid-cols-2 gap-4 text-2xl">
+          
+          <div class="rounded-2xl bg-[#2D5E66] p-7">
+            <h3 class="pb-5 text-3xl font-bold">
+              Desenvolvimento de software
+            </h3>
+            <ul class="list-disc space-y-4 pl-6">
+              {% for sk in skills %}
+              <li>{{ sk.dev }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+          
+          <div class="rounded-2xl bg-[#6584C2] p-7">
+              <h3 class="pb-5 text-3xl font-bold">
+                Dados, Análise e Automação
+            </h3>
+            <ul class="list-disc space-y-4 pl-6">
+              {% for sk in skills %}
+              <li>{{ sk.data_science }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        
+        </div>      
+          <hr class="my-10 border-gray-300">
+      </section>
+
+      <section id="Projetos">
+        <h2 class="mt-10 text-6xl font-bold">Projetos</h2>
+         <div class=" flex-col w-full h-full py-3 mt-10 content-center">
+            {% for project in projects %}
+              <a href={{project.gitHub}}>
+                <div class=" bg-[#385EA8] w-full h-[200px] p-10 rounded-2xl 
+                              my-5 transition-all duration-500 ease-out 
+                              hover:h-[190px] hover:w-[95%] m-auto">
+                  <p class="text-2xl">{{project.title}}</p>
+                  <p>{{project.text}}</p>          
+                </div>
+              </a>
+            {% endfor %}
+         </div>
+         <hr class="my-10 border-gray-300">          
+      </section>
+
+
+      <section id="Formacao">
+        <h2 class="mt-10 text-6xl font-bold">Formação acadêmica</h2>
+         <div class=" flex-col w-full h-full py-3 mt-5 content-center">
+            {% for formacao in formacoes %}
+              
+                <div class=" my-5 w-[90%] m-auto">
+                  <P>{{formacao.data}}</P>
+                  <p class="text-2xl">{{formacao.title}}</p>
+                  <p>{{formacao.text}}</p>          
+                </div>
+              
+            {% endfor %}
+         </div>
+         <hr class="my-10 border-gray-300">           
+      </section>
+
+      <section id="Experiencia">
+        <h2 class="mt-10 text-6xl font-bold">Experiência</h2>
+         <div class=" flex-col w-full h-full py-3 mt-5 content-center">
+            {% for experiencia in experiencias %}
+              
+                <div class=" my-5 w-[90%] m-auto">
+                  <P>{{experiencia.data}}</P>
+                  <p class="text-2xl">{{experiencia.cargo}}</p>
+                  <p class="text-2xl">{{experiencia.empresa}}</p>
+                  <p class="pt-1">{{experiencia.descricao}}</p>
+                </div>
+              
+            {% endfor %}
+         </div>          
+      </section>
     
+    </div>
   </main>
+  
+  <footer class="h-[30vh] w-screen bg-[#272628]">
+    <ul>
+      <li>teste</li>
+      <li>teste</li>
+      <li>teste</li>
+    </ul>
+  </footer>
 </body>
+
 </html>

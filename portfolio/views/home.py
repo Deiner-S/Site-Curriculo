@@ -2,30 +2,6 @@ from django.shortcuts import render
 from theme.templates.paths import Paths as path
 
 def home(request):
-    positions = [
-        {'top': 845, 'left': 732},
-        {'top': 170, 'left': 1466},
-        {'top': 46, 'left': 1763},
-        {'top': 100, 'left': 146},
-        {'top': 566, 'left': 888},
-        {'top': 609, 'left': 1300},
-        {'top': 774, 'left': 1666},
-        {'top': 211, 'left': 1197},
-        {'top': 1086, 'left': 1421},
-        {'top': 817, 'left': 173},
-    ]
-    positions2 = [
-        {'top': 434, 'left': 234},
-        {'top': 363, 'left': 751},
-        {'top': 440, 'left': 1563},
-        {'top': 691, 'left': 438},
-        {'top': 38, 'left': 859},
-        {'top': 1083, 'left': 478},
-        {'top': 1153, 'left': 999},
-        {'top': 1070, 'left': 763},
-        {'top': 820, 'left': 1115},
-        {'top': 183, 'left': 513},
-    ]
 
     language = [
         {"name" : "Python", "porce" : "75,100"},
@@ -40,4 +16,73 @@ def home(request):
         {"name" : "TailWind", "porce" : "60,100"},
         {"name" : "Pandas", "porce" : "65,100"},
     ]
-    return render(request, path.HOME,{'positions': positions, "positions2":positions2, "frameworks":frameworks, "language":language})
+
+
+    skills = [
+        {"data_science": "Coleta e scraping de dados", "dev":"Mapeamento de processos" },
+        {"data_science": "Tratamento e limpeza de dados", "dev":"Estruturação de back-end" },
+        {"data_science": "Análise exploratória de dados", "dev":"Estruturação de interfaces e componentes" },
+        {"data_science": "Visualização de dados", "dev":"Atenção à aplicação de principios de arquitetura de software" },
+        {"data_science": "Automação de processos e rotinas", "dev":"Atenção à clareza e coesão de código" },
+    ]
+
+
+
+    texts =[
+        {"title": "As vezes dar dois passos para traz é a melhor decisão.", 
+         "text": """Muitas vezes, na labuta e na tentativa constante de solucionar um problema, 
+         deixamos passar despercebido que estamos olhando apenas um nó em meio a um emaranhado de questões. 
+         Dar alguns passos para trás nos permite enxergar a dimensão do problema e entender onde devemos focar nossas energias."""},
+
+    ]
+
+    projects = [
+        {"gitHub":"https://github.com/Deiner-S/Site-Curriculo",
+         "title":"Site",
+         "text":"aijsdnundqinwc8aynscam asnmq8wndquwncqayc  qwunas8c q qwudnq09wdpaia  q9oimc9 iuwpmamasidmp9aid9awd"},
+
+        {"gitHub":"https://github.com/Deiner-S/app_AT",
+         "title":"App Agro Terra",
+         "text":"aijsdnundqinwc8aynscam asnmq8wndquwncqayc  qwunas8c q qwudnq09wdpaia  q9oimc9 iuwpmamasidmp9aid9awd"},
+
+        {"gitHub":"Diário Escolar",
+         "title":"teste",
+         "text":"aijsdnundqinwc8aynscam asnmq8wndquwncqayc  qwunas8c q qwudnq09wdpaia  q9oimc9 iuwpmamasidmp9aid9awd"},
+
+        {"gitHub":"Opções binárias",
+         "title":"teste",
+         "text":"aijsdnundqinwc8aynscam asnmq8wndquwncqayc  qwunas8c q qwudnq09wdpaia  q9oimc9 iuwpmamasidmp9aid9awd"},
+
+
+    ]
+
+    formacoes = [
+        {"title":"Instituto Federal de Ciências e Tecnologia de Goiás",
+         "data":"MARÇO DE 2016 - MARÇO DE 2019",
+         "text":"Tecnólogo em Análise e Desenvolvimento de Sistemas"},
+
+        {"title":"Universidade Estácio de Sá ",
+         "data":"JULHO DE 2023 - DEZEMBRO DE 2025",
+        "text":"Tecnólogo em Análise e Desenvolvimento de Sistemas"}
+    ]
+
+    experiencias = [
+        {"cargo":"ANALISTA ADMINISTRATIVO",
+         "data":"SETEMBRO DE 2024 - ATUAL",
+         "empresa":"Universidade Federal de Uberlândia",
+         "descricao":"""Atualmente designado ao setor de livraria da Editora UFU, 
+         atuando na elaboração de relatórios financeiros e operacionais a partir de dados de vendas e emissão de notas fiscais. 
+         Responsável pelo controle e acompanhamento de todo o fluxo do livro físico na livraria, com aplicação pontual de automação e 
+         mapeamento de processos."""},
+    ]
+         
+
+
+    return render(request, path.HOME,{
+                                      "texts":texts, 
+                                      "skills":skills, 
+                                      "language":language, 
+                                      "projects":projects, 
+                                      "formacoes":formacoes, 
+                                      "frameworks":frameworks, 
+                                      "experiencias":experiencias})
