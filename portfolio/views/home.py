@@ -39,19 +39,19 @@ def home(request):
     projects = [
         {"gitHub":"https://github.com/Deiner-S/Site-Curriculo",
          "title":"Site",
-         "text":"aijsdnundqinwc8aynscam asnmq8wndquwncqayc  qwunas8c q qwudnq09wdpaia  q9oimc9 iuwpmamasidmp9aid9awd"},
+         "text":""},
 
         {"gitHub":"https://github.com/Deiner-S/app_AT",
          "title":"App Agro Terra",
-         "text":"aijsdnundqinwc8aynscam asnmq8wndquwncqayc  qwunas8c q qwudnq09wdpaia  q9oimc9 iuwpmamasidmp9aid9awd"},
+         "text":""},
 
         {"gitHub":"Diário Escolar",
-         "title":"teste",
-         "text":"aijsdnundqinwc8aynscam asnmq8wndquwncqayc  qwunas8c q qwudnq09wdpaia  q9oimc9 iuwpmamasidmp9aid9awd"},
+         "title":"Diário Escolar",
+         "text":""},
 
         {"gitHub":"Opções binárias",
-         "title":"teste",
-         "text":"aijsdnundqinwc8aynscam asnmq8wndquwncqayc  qwunas8c q qwudnq09wdpaia  q9oimc9 iuwpmamasidmp9aid9awd"},
+         "title":"Opções binárias",
+         "text":""},
 
 
     ]
@@ -77,7 +77,7 @@ def home(request):
     ]
 
     contacts = [
-        {"text":"linkedin","link":"www.linkedin.com/in/deiner-rodrigues-1b93b63a3"},
+        {"text":"linkedin","link":"https://www.linkedin.com/in/deiner-rodrigues-1b93b63a3/"},
         {"text":"GitHub","link":"https://github.com/Deiner-S"},
         {"text":"deiner.souza@outlook.com","link":"mailto:deiner.souza@outlook.com?subject=Interesse%20em%20contratação"},
         {"text":"(34) 9-9967-0813","link":"https://wa.me/5534999670813"},
