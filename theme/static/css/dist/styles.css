@@ -7,6 +7,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-blue-400: oklch(70.7% 0.165 254.624);
     --color-slate-100: oklch(96.8% 0.007 247.896);
     --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-white: #fff;
@@ -259,6 +260,12 @@
   .col-span-1 {
     grid-column: span 1 / span 1;
   }
+  .m-2 {
+    margin: calc(var(--spacing) * 2);
+  }
+  .m-3 {
+    margin: calc(var(--spacing) * 3);
+  }
   .m-5 {
     margin: calc(var(--spacing) * 5);
   }
@@ -267,6 +274,9 @@
   }
   .mx-auto {
     margin-inline: auto;
+  }
+  .my-3 {
+    margin-block: calc(var(--spacing) * 3);
   }
   .my-5 {
     margin-block: calc(var(--spacing) * 5);
@@ -330,6 +340,31 @@
   }
   .ml-\[3vw\] {
     margin-left: 3vw;
+  }
+  @layer daisyui.l1.l2.l3 {
+    .footer {
+      display: grid;
+      width: 100%;
+      grid-auto-flow: row;
+      place-items: start;
+      column-gap: calc(0.25rem * 4);
+      row-gap: calc(0.25rem * 10);
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+    }
+    .footer > * {
+      display: grid;
+      place-items: start;
+      gap: calc(0.25rem * 2);
+    }
+    .footer.footer-center {
+      grid-auto-flow: column dense;
+      place-items: center;
+      text-align: center;
+    }
+    .footer.footer-center > * {
+      place-items: center;
+    }
   }
   .flex {
     display: flex;
@@ -401,6 +436,26 @@
   .animate-fade-up {
     animation: var(--animate-fade-up);
   }
+  @layer daisyui.l1.l2.l3 {
+    .link {
+      cursor: pointer;
+      text-decoration-line: underline;
+    }
+    .link:focus {
+      --tw-outline-style: none;
+      outline-style: none;
+    }
+    @media (forced-colors: active) {
+      .link:focus {
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+      }
+    }
+    .link:focus-visible {
+      outline: 2px solid currentColor;
+      outline-offset: 2px;
+    }
+  }
   .list-disc {
     list-style-type: disc;
   }
@@ -424,6 +479,9 @@
   }
   .justify-between {
     justify-content: space-between;
+  }
+  .justify-center {
+    justify-content: center;
   }
   .justify-end {
     justify-content: flex-end;
@@ -473,17 +531,14 @@
   .bg-\[\#2D5E66\] {
     background-color: #2D5E66;
   }
+  .bg-\[\#111\] {
+    background-color: #111;
+  }
   .bg-\[\#385EA8\] {
     background-color: #385EA8;
   }
   .bg-\[\#6584C2\] {
     background-color: #6584C2;
-  }
-  .bg-\[\#272628\] {
-    background-color: #272628;
-  }
-  .bg-\[\#\] {
-    background-color: #;
   }
   .bg-\[linear-gradient\(30deg\,\#385EA7\,\#222B53\)\] {
     background-image: linear-gradient(30deg,#385EA7,#222B53);
@@ -511,6 +566,9 @@
   }
   .pl-20 {
     padding-left: calc(var(--spacing) * 20);
+  }
+  .text-center {
+    text-align: center;
   }
   .font-mono {
     font-family: var(--font-mono);
@@ -574,6 +632,22 @@
   .animate-ease-in {
     animation-timing-function: cubic-bezier(0.4, 0, 1, 1);
   }
+  .after\:mx-2::after {
+    content: var(--tw-content);
+    margin-inline: calc(var(--spacing) * 2);
+  }
+  .after\:mx-3::after {
+    content: var(--tw-content);
+    margin-inline: calc(var(--spacing) * 3);
+  }
+  .after\:content-\[\'\|\'\]::after {
+    --tw-content: '|';
+    content: var(--tw-content);
+  }
+  .last\:after\:content-\[\'\'\]:last-child::after {
+    --tw-content: '';
+    content: var(--tw-content);
+  }
   @media (hover: hover) {
     .hover\:h-\[190px\]:hover {
       height: 190px;
@@ -582,6 +656,11 @@
   @media (hover: hover) {
     .hover\:w-\[95\%\]:hover {
       width: 95%;
+    }
+  }
+  @media (hover: hover) {
+    .hover\:text-blue-400:hover {
+      color: var(--color-blue-400);
     }
   }
   @media (hover: hover) {
@@ -892,6 +971,11 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-content {
+  syntax: "*";
+  initial-value: "";
+  inherits: false;
+}
 @keyframes fade-up {
   0% {
     opacity: 0;
@@ -913,6 +997,7 @@
       --tw-font-weight: initial;
       --tw-duration: initial;
       --tw-ease: initial;
+      --tw-content: "";
     }
   }
 }

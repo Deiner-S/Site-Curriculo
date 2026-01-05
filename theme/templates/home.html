@@ -17,6 +17,7 @@
       <a href="#Projetos" class="font-bold text-lg hover:text-gray-300">Projetos</a>
       <a href="#Formacao" class="font-bold text-lg hover:text-gray-300">Formação</a>
       <a href="#Experiencia" class="font-bold text-lg hover:text-gray-300">Experiência</a>
+      <a href="#Contatos" class="font-bold text-lg hover:text-gray-300">Contatos</a>
     </nav>
   </header>
 
@@ -173,12 +174,19 @@
     </div>
   </main>
   
-  <footer class="h-[30vh] w-screen bg-[#272628]">
-    <ul>
-      <li>teste</li>
-      <li>teste</li>
-      <li>teste</li>
-    </ul>
+  <footer class="flex h-[30vh] w-screen bg-[#111]">
+
+    <div id="Contatos" class="justify-center content-center text-center w-full">
+      <div class="flex flex-wrap justify-center">
+        {% for contact in contacts %}
+          <a class="after:content-['|'] after:mx-3 my-3 last:after:content-[''] hover:text-blue-400" href="{contact.link}">{{contact.text}}</a>
+        {% endfor %}
+      </div>
+
+      <p class="mt-10">© 2026 • Deiner Rodrigues de Souza</p>
+         
+    </div>
+    
   </footer>
 </body>
 

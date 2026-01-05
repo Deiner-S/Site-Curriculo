@@ -59,7 +59,7 @@ def home(request):
     formacoes = [
         {"title":"Instituto Federal de Ciências e Tecnologia de Goiás",
          "data":"MARÇO DE 2016 - MARÇO DE 2019",
-         "text":"Tecnólogo em Análise e Desenvolvimento de Sistemas"},
+         "text":"Técnico em Manutenção e Suporte em Informática"},
 
         {"title":"Universidade Estácio de Sá ",
          "data":"JULHO DE 2023 - DEZEMBRO DE 2025",
@@ -75,14 +75,24 @@ def home(request):
          Responsável pelo controle e acompanhamento de todo o fluxo do livro físico na livraria, com aplicação pontual de automação e 
          mapeamento de processos."""},
     ]
+
+    contacts = [
+        {"text":"linkedin","link":"www.linkedin.com/in/deiner-rodrigues-1b93b63a3"},
+        {"text":"GitHub","link":"https://github.com/Deiner-S"},
+        {"text":"deiner.souza@outlook.com","link":"mailto:deiner.souza@outlook.com?subject=Interesse%20em%20contratação"},
+        {"text":"(34) 9-9967-0813","link":"https://wa.me/5534999670813"},
+        
+    ]
          
 
 
     return render(request, path.HOME,{
                                       "texts":texts, 
                                       "skills":skills, 
+                                      "contacts":contacts,
                                       "language":language, 
                                       "projects":projects, 
                                       "formacoes":formacoes, 
                                       "frameworks":frameworks, 
-                                      "experiencias":experiencias})
+                                      "experiencias":experiencias,
+                                      })
